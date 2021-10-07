@@ -1,0 +1,16 @@
+ca969148f768895cf166271d2545b50a *DESCRIPTION
+df1383674984cef27f9d2ea0ca91bb28 *NAMESPACE
+ccb4db98c8aee36b3b5a88d4051549d5 *NEWS.md
+50907259ef93f0d0031114b6de7ffdfe *R/RcppExports.R
+d32237ac5f36549edd59093b553f89b6 *R/oneSample.R
+06d115ef390c936b734b1c6ddeeaa9ea *R/twoSamples.R
+9220244b3cec5c52fc70fc23a949c09f *R/utils.R
+6b5c47969b36c64994f9e244acb2a511 *README.md
+0b4fc6c81f8e2a628ff1ef2414064d5f *man/oneSample.Rd
+32b6c7018de50bd3347ccc14ca7f0632 *man/rowVariance.Rd
+a86aeec6fc307fd776c9c8745c9b5487 *man/twoSamples.Rd
+11be546fd47bf603b8924f363af82d48 *src/Makevars
+61059660eb073d93e00e8ee054237071 *src/Makevars.win
+8fc0354adace04809290c37187e9d6c6 *src/RcppExports.cpp
+306a39e78b805dd61898c4d93a693470 *src/permGroup.cpp
+133d250ad9d41ed35feb31e1ed87b1cf *src/signFlip.cpp
