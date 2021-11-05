@@ -4,42 +4,34 @@
 \alias{twoSamples}
 \title{Permutatation-based two sample t-test}
 \usage{
-twoSamples(X, B = 1000, alternative, seed = 1234, 
-rand = FALSE, permReturn = FALSE, label = NULL)
+twoSamples(X, B = 1000, seed = 1234, 
+permReturn = TRUE, label = NULL)
 }
 \arguments{
-\item{X}{data matrix where rows represent the \code{m} variables and columns the \code{n} observations. The columns' name defines the groups' label.}
+\item{X}{data matrix where columns represent the \code{m} variables and rows the \code{n} observations. The columns' name defines the groups' label.}
 
 \item{B}{numeric value, number of permutations to be performed, including the identity. Default is 1000.}
 
-\item{alternative}{character string referring to the alternative hypothesis (\code{greater}, \code{lower}, \code{two.sided}).}
-
 \item{seed}{numeric value, specify seed. Default is 1234.}
 
-\item{rand}{logical value, \code{TRUE} to compute p-values by permutation distribution.}
+\item{permReturn}{logical value, \code{TRUE} to return the t-tests and p-values permutation distribution. Default is \code{TRUE}.}
 
-\item{permReturn}{logical value, \code{TRUE} to return the t-tests and p-values permutation distribution.}
-
-\item{label}{by default \code{label = NULL}. Labels of the observations, if \code{NULL} the columns's name are considered.}
+\item{label}{by default \code{label = NULL}. Labels of the observations, if \code{NULL} the rows's name are considered. D}
 }
 \value{
-Returns a list with the following objects:
+Returns a matrix objects:
 \describe{ 
-  \item{Test}{Vector of \eqn{m} observed one-sample t-tests}
-  \item{Test_H0}{Matrix with dimensions \eqn{m \times B} of permuted one-sample t-tests}
-  \item{pv}{Vector of \eqn{m} observed p-values} 
-  \item{pv_H0}{Matrix with dimensions \eqn{m \times B} of permuted p-values}}
-  if \code{permReturn = TRUE} otherwise returns a list with the following objects:
+  \item{Test}{Matrix with dimensions \eqn{m x B} of permuted two-samples t-tests. The first column is the observed one-sample t-tests.}}
+  if \code{permReturn = TRUE} otherwise returns:
 \describe{ 
-  \item{Test}{Vector of \eqn{m} observed one-sample t-tests}
-  \item{pv}{Vector of \eqn{m} observed p-values}}
+  \item{Test}{Vector of \eqn{m} observed two-samples t-tests}}
 }
 \description{
 Performs two-sample t-tests by permutations.
 }
 \examples{
-X <- matrix(rnorm(100*20), ncol=20)
-colnames(X) <- c(rep(0, 10), rep(1,10))
+X <- matrix(rnorm(100*20), nrow=20)
+rownames(X) <- c(rep(0, 10), rep(1,10))
 out<- twoSamples(X = X) 
 }
 \author{

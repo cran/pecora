@@ -40,4 +40,3 @@ arma::mat signFlip(arma::mat X, double B) {
 #T <- signFlip(X, B)
 #str(T)
 */
-
